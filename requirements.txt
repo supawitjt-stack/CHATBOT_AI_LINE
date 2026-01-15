@@ -25,7 +25,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.6
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
-line-bot-sdk==2.24.0
+line-bot-sdk
 MarkupSafe==3.0.3
 narwhals==2.15.0
 numpy==2.4.1
@@ -66,5 +66,5 @@ uritemplate==4.2.0
 urllib3==2.6.3
 watchdog==6.0.0
 Werkzeug==3.1.5
-
 gunicorn==20.1.0
+
