@@ -23,7 +23,7 @@ load_dotenv()
 
 # กำหนด Path ของโฟลเดอร์ CHATBOT_AI เพื่อให้สามารถดึงไฟล์ Prompt และ Cache ได้
 current_dir = os.path.dirname(os.path.abspath(__file__))
-chatbot_ai_dir = os.path.join(current_dir, 'CHATBOT_AI')
+chatbot_ai_dir = os.path.join(current_dir, 'LINE_his')
 sys.path.append(chatbot_ai_dir)
 
 # พยายามโหลด Prompt และเนื้อหาเอกสาร (Knowledge Base)
