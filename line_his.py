@@ -23,8 +23,7 @@ load_dotenv()
 
 # กำหนด Path ของโฟลเดอร์ CHATBOT_AI เพื่อให้สามารถดึงไฟล์ Prompt และ Cache ได้
 current_dir = os.path.dirname(os.path.abspath(__file__))
-chatbot_ai_dir = os.path.join(current_dir, 'CHATBOT_AI_LINE')
-sys.path.append(chatbot_ai_dir)
+sys.path.append(current_dir)
 
 # พยายามโหลด Prompt และเนื้อหาเอกสาร (Knowledge Base)
 try:
@@ -35,7 +34,7 @@ except ImportError:
     print("Warning: Could not import prompt from CHATBOT_AI")
 
 def get_knowledge_base():
-    cache_path = os.path.join(chatbot_ai_dir, "extracted_content_cache.txt")
+    cache_path = os.path.join(current_dir, "extracted_content_cache.txt")
     if os.path.exists(cache_path):
         try:
             with open(cache_path, "r", encoding="utf-8") as f:
@@ -186,3 +185,4 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
 
     app.run(host='0.0.0.0', port=port)
+
