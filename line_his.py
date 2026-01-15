@@ -23,7 +23,7 @@ load_dotenv()
 
 # กำหนด Path ของโฟลเดอร์ CHATBOT_AI เพื่อให้สามารถดึงไฟล์ Prompt และ Cache ได้
 current_dir = os.path.dirname(os.path.abspath(__file__))
-chatbot_ai_dir = os.path.join(current_dir, 'LINE_his')
+chatbot_ai_dir = os.path.join(current_dir, 'CHATBOT_AI_LINE')
 sys.path.append(chatbot_ai_dir)
 
 # พยายามโหลด Prompt และเนื้อหาเอกสาร (Knowledge Base)
@@ -184,4 +184,5 @@ def handle_message(event):
 if __name__ == "__main__":
     # ใช้ Port ตามสภาพแวดล้อม หรือ Default ที่ 5000
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host='0.0.0.0', port=port)
